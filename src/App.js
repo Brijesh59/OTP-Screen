@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import OTPInput from "./components/OTPInput";
 import "./styles.css";
 
 export default function App() {
-  const [otp, setOTP] = useState("");
   return (
     <div className="App">
-      <OTPInput noOfInputs={4} onChange={otp => setOTP(otp)} />
-      OTP: {otp}
+      <OTPInput noOfInputs={4} onChange={otp => console.log(otp)} />
     </div>
   );
 }
